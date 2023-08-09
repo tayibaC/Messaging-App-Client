@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox fx:id="root" alignment="CENTER" maxHeight="-Infinity" stylesheets = "@/styles/style1.css" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="8.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientController">
+    <children>
+        <TextArea fx:id="messages" prefHeight="200.0" prefWidth="200.0" editable="false"/>
+        <TextField fx:id="input" prefHeight="26.0" prefWidth="555.0" />
+        <HBox fx:id="buttons" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0">
+            <children>
+                <Button fx:id="sendToAll" mnemonicParsing="false" text="Send to All" onAction="#getSendToAll" />
+                <Button fx:id="sendToClients" mnemonicParsing="false" text="Send to Clients" onAction="#sendSpecificClients" />
+                <TextField fx:id="targetClients" promptText="Enter Client and Your ID" />
+            </children>
+        </HBox>
+        <Label fx:id="infoLabel" text="Type your message and click 'Send to All' to send to everyone. To send to specific clients, type their client numbers separated by commas in the text box next to 'Send to Clients' button. At the end, add your own ID, and click 'Send to Clients'.." textAlignment="CENTER" wrapText="true" />
+    </children>
+</VBox>
